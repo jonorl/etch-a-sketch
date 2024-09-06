@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50em;
+    width: 50em;
+    margin: 0;
+}
+
+#flex-container div {
+    width: calc(100% / 16); /* Adjust this to fit 16 divs per row */
+    height: calc(100% / 16); /* Make height equal to width */
+    box-sizing: border-box;
+    border: 1px solid black; /* Optional: to see the grid lines */
+}
