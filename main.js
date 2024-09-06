@@ -24,7 +24,6 @@ btn.addEventListener("click", function (e) {
   });
 
 
-
 //this area creates the grid:
 
 function createDivs(x, y) {
@@ -40,9 +39,6 @@ function removeDivs() {
     container.innerHTML = '';
 };
 
-// createDivs(gridSize, gridSize)
-
-
 addEventListener("load", () => {createDivs(gridSize, gridSize)});
 
 
@@ -52,5 +48,9 @@ const divs = document.querySelectorAll("div");
 
 divs.forEach((div) => {
     div.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "black";
+    let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    e.target.style.backgroundColor = randomColor; //select black if defaulting back to black
+    let opacity = parseFloat(e.target.style.opacity) || 0.1;
+    opacity += 0.1;
+    e.target.style.opacity = opacity;
 })});
