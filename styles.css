@@ -1,9 +1,15 @@
-body {
+body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 0;  
+}
+
+button{
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 #flex-container {
@@ -15,8 +21,8 @@ body {
 }
 
 #flex-container div {
-    width: calc(100% / 16); /* Adjust this to fit 16 divs per row */
-    height: calc(100% / 16); /* Make height equal to width */
+    width: calc(100% / var(--divs-per-row));
+    height: calc(100% / var(--divs-per-row));
     box-sizing: border-box;
     border: 1px solid black; /* Optional: to see the grid lines */
 }
